@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: gray;
+      border: 5px solid red;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid div {
+      padding: 30px;
+      text-align: center;
+      font-size: 25px;
+      border: 3px dotted blue;
+    }
+
+    .header {
+      background: royalblue;
+      grid-column: 1 / 4;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .menu {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+
+    .main {
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+
+    .sidebar {
+      grid-column: 3 / 4;
+      grid-row: 2;
+    }
+
+    .footer {
+      background: royalblue;
+      grid-column: 1 / 4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="main">Main</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>
